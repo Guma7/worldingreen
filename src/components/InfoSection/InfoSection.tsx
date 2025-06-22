@@ -30,7 +30,7 @@ const SectionContent = styled.div<{ reverse: boolean }>`
   
   @media (min-width: ${({ theme }) => theme.breakpoints.laptop}) {
     flex-direction: ${({ reverse }) => reverse ? 'row-reverse' : 'row'};
-    align-items: center;
+    align-items: flex-start;
   }
 `;
 

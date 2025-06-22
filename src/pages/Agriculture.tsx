@@ -108,7 +108,7 @@ const AgriculturePage: React.FC = () => {
       <Hero 
         title="Impactos da Agricultura"
         subtitle="Entenda como a produção de alimentos afeta o meio ambiente e quais são as alternativas sustentáveis"
-        backgroundImage="/images/agriculture-aerial.jpg"
+        backgroundImage="https://images.unsplash.com/photo-1625246333195-78d9c38ad449?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1920&q=80"
         ctaText="Saiba Mais"
         ctaLink="#info"
         overlay={true}
@@ -121,7 +121,7 @@ const AgriculturePage: React.FC = () => {
           <InfoSection 
             title={agricultureIssue.title}
             description={agricultureIssue.description}
-            imageUrl={agricultureIssue.imageUrl || '/images/agriculture-aerial.jpg'}
+            imageUrl={agricultureIssue.imageUrl || 'https://images.unsplash.com/photo-1625246333195-78d9c38ad449?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80'}
             imageAlt="Agricultura e pecuária"
             backgroundColor={theme.colors.background}
           />
@@ -131,7 +131,7 @@ const AgriculturePage: React.FC = () => {
       <InfoSection 
         title="Pecuária e Meio Ambiente"
         description="A pecuária é uma das atividades humanas com maior impacto ambiental. No Brasil, a agropecuária e o desmatamento foram responsáveis por 77% das emissões de gases de efeito estufa em 2022, com a pecuária sendo a principal causa do desmatamento na Amazônia e no Cerrado. Globalmente, a criação de animais para consumo ocupa cerca de 83% das terras agrícolas, mas fornece apenas 18% das calorias consumidas pelos humanos. A produção de carne, especialmente a bovina, também é intensiva em água: são necessários aproximadamente 15.000 litros de água para produzir 1kg de carne bovina, em comparação com 290 litros para 1kg de batata. Além disso, o gado é responsável por 14,5% das emissões globais de gases de efeito estufa, principalmente metano, um gás com potencial de aquecimento 28 vezes maior que o CO2."
-        imageUrl="/images/cattle-farming.jpg"
+        imageUrl="https://s2-g1.glbimg.com/Wpm0RZX6vVPuruJq1OTJAT_wqjk=/0x0:5500x3667/1000x0/smart/filters:strip_icc()/i.s3.glbimg.com/v1/AUTH_59edd422c0c84a879bd37670ae4f538a/internal_photos/bs/2021/H/Q/nx5UQiSPAlSuVBAdfBBA/2021-09-10t135551z-1-lynxmpeh890m8-rtroptp-4-ambiente-amazonia-desmatamento.jpg"
         imageAlt="Pecuária e desmatamento"
         reverse={true}
         backgroundColor={theme.colors.background}
@@ -140,7 +140,7 @@ const AgriculturePage: React.FC = () => {
       <InfoSection 
         title="Uso da Água na Agricultura"
         description="A agricultura é responsável por cerca de 70% do consumo global de água doce, com grande parte sendo utilizada para irrigação. No Brasil, esse percentual chega a 60%. A produção de alimentos de origem animal é particularmente intensiva em água: além da água consumida diretamente pelos animais, grandes volumes são necessários para produzir sua alimentação. A irrigação ineficiente e o manejo inadequado do solo contribuem para o desperdício de água e a contaminação de recursos hídricos por agrotóxicos e fertilizantes, causando eutrofização e prejudicando ecossistemas aquáticos."
-        imageUrl="/images/agriculture-water.jpg"
+        imageUrl="https://www.teraambiental.com.br/hs-fs/hubfs/0.jpg?width=1800&name=0.jpg"
         imageAlt="Uso da água na agricultura"
         backgroundColor={theme.colors.background}
       />
@@ -191,7 +191,7 @@ const AgriculturePage: React.FC = () => {
       <InfoSection 
         title="Agricultura Sustentável"
         description="A transição para sistemas alimentares sustentáveis é essencial para reduzir os impactos ambientais da agricultura. Práticas como a agricultura orgânica, agroflorestal e regenerativa podem ajudar a restaurar a saúde do solo, aumentar a biodiversidade e reduzir a dependência de insumos químicos. A agricultura de precisão utiliza tecnologia para otimizar o uso de recursos como água, fertilizantes e pesticidas. A redução do desperdício de alimentos também é crucial: aproximadamente um terço de todos os alimentos produzidos globalmente é perdido ou desperdiçado. Além disso, a adoção de dieta baseada em vegetais pode reduzir significativamente a pressão sobre recursos naturais e as emissões de gases de efeito estufa associadas à produção de alimentos."
-        imageUrl="/images/sustainable-agriculture.jpg"
+        imageUrl="https://images.unsplash.com/photo-1574323347407-f5e1ad6d020b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80"
         imageAlt="Agricultura sustentável"
         reverse={true}
         backgroundColor={theme.colors.background}

@@ -118,7 +118,7 @@ const DeforestationPage: React.FC = () => {
       <Hero 
         title="Desmatamento no Brasil"
         subtitle="Entenda as causas, impactos e soluções para o desmatamento em nossos biomas"
-        backgroundImage="/images/deforestation-cattle.jpg"
+        backgroundImage="https://infoamazonia.org/wp-content/uploads/2024/09/foto_3.jpg"
         ctaText="Saiba Mais"
         ctaLink="#info"
         overlay={true}
@@ -131,7 +131,7 @@ const DeforestationPage: React.FC = () => {
           <InfoSection 
             title={deforestationIssue.title}
             description={deforestationIssue.description}
-            imageUrl={deforestationIssue.imageUrl || '/images/deforestation-cattle.jpg'}
+            imageUrl={deforestationIssue.imageUrl || 'https://images.unsplash.com/photo-1574263867128-a3d5c1b1deaa?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80'}
             imageAlt="Desmatamento para pecuária"
             backgroundColor={theme.colors.background}
           />
@@ -141,7 +141,7 @@ const DeforestationPage: React.FC = () => {
       <InfoSection 
         title="Biomas Brasileiros em Risco"
         description="O Brasil possui seis biomas principais: Amazônia, Cerrado, Caatinga, Mata Atlântica, Pantanal e Pampa. A Amazônia, maior floresta tropical do mundo, perdeu mais de 17% de sua cobertura original. O Cerrado, segundo maior bioma do país, já perdeu cerca de 50% de sua vegetação nativa. A Mata Atlântica, que originalmente cobria 15% do território brasileiro, hoje mantém apenas 12,4% de sua cobertura florestal original. O desmatamento nesses biomas é impulsionado principalmente pela expansão agropecuária, especialmente para criação de gado e cultivo de soja."
-        imageUrl="/images/brazilian-biomes.jpg"
+        imageUrl="https://s2.static.brasilescola.uol.com.br/be/2023/01/area-do-cerrado-um-importante-bioma-brasileiro-destruida-por-um-incendio.jpg"
         imageAlt="Biomas brasileiros"
         reverse={true}
         backgroundColor={theme.colors.background}
@@ -149,8 +149,8 @@ const DeforestationPage: React.FC = () => {
       
       <InfoSection 
         title="Impactos do Desmatamento"
-        description="O desmatamento tem impactos severos no clima, biodiversidade e comunidades locais. A remoção da cobertura florestal reduz a capacidade de absorção de CO2, contribuindo para as mudanças climáticas. Também causa perda de biodiversidade, com extinção de espécies e desequilíbrio dos ecossistemas. Além disso, afeta o ciclo hidrológico, causando alterações nos padrões de chuva e disponibilidade de água. Comunidades indígenas e tradicionais que dependem da floresta para sua subsistência são particularmente vulneráveis aos impactos do desmatamento."
-        imageUrl="/images/deforestation-impacts.jpg"
+        description="O desmatamento tem impactos severos no clima, biodiversidade e comunidades locais. A remoção da cobertura florestal reduz a capacidade de absorção de CO2, contribuindo para as mudanças climáticas. Também causa perda de biodiversidade, com extinção de espécies e desequilíbrio dos ecossistemas. Além disso, afeta o ciclo hidrológico, causando alterações nos padrões de chuva e disponibilidade de água. Comunidades indígenas e tradicionais que dependem da floresta para sua subsistência são particularmente vulneráveis aos impactos do desmatamento. Os eventos climáticos extremos de 2024 demonstraram claramente a conexão entre desmatamento e catástrofes naturais. As enchentes devastadoras que atingiram o Rio Grande do Sul em maio de 2024, causando mais de 170 mortes e afetando milhões de pessoas, estão diretamente relacionadas às alterações no ciclo hidrológico causadas pelo desmatamento. A perda de cobertura vegetal reduz a capacidade do solo de absorver água, intensificando as enchentes. Um fator crucial foi o bloqueio atmosférico causado por uma massa de ar quente e seco que se instalou no centro do Brasil, com temperaturas de 5 a 10 graus Celsius acima da média histórica. Este bloqueio impediu o deslocamento normal das frentes frias, fazendo com que as nuvens de chuva permanecessem estacionárias sobre o Rio Grande do Sul por vários dias consecutivos, ao invés de se moverem naturalmente para outros estados. O desmatamento contribui diretamente para a formação dessas massas de calor atípicas, pois a remoção da cobertura florestal reduz a evapotranspiração e altera os padrões de circulação atmosférica, criando condições propícias para bloqueios atmosféricos prolongados. Na Europa, as enchentes na Itália, Alemanha e outros países em 2024 também refletem os impactos globais do desmatamento. A destruição de florestas altera os padrões de precipitação em escala planetária, contribuindo para eventos extremos em regiões distantes. Na África, países como Quênia e Tanzânia enfrentaram enchentes devastadoras que mataram centenas de pessoas, enquanto outras regiões sofreram secas severas - ambos os extremos agravados pela perda de cobertura florestal. Os furacões que devastaram o Caribe e a costa leste dos Estados Unidos em 2024, incluindo o Furacão Helene e Milton, ganharam intensidade devido ao aquecimento dos oceanos, processo acelerado pela redução da capacidade de absorção de carbono causada pelo desmatamento global. As florestas funcionam como reguladores climáticos naturais, e sua destruição amplifica a frequência e intensidade desses eventos extremos."
+        imageUrl="https://nexo-uploads-beta.s3.amazonaws.com/wp-content/uploads/images/2024/05/2024-05-04T210736Z_733773333_RC2RJ7ASATG4_RTRMADP_3_BRAZIL-RAINS-scaled.jpg"
         imageAlt="Impactos do desmatamento"
         backgroundColor={theme.colors.background}
       />

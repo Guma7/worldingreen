@@ -28,6 +28,21 @@ body {
   place-items: center;
   min-width: 320px;
   min-height: 100vh;
+  user-select: text;           /* Permite seleção de texto */
+  -webkit-user-select: text;
+  -moz-user-select: text;
+  -ms-user-select: text;
+}
+
+/* Remove focus outline e cursor de edição */
+* {
+  outline: none;
+  caret-color: transparent;    /* Remove a barrinha piscante */
+}
+
+/* Cursor padrão para elementos não editáveis */
+*:not(input):not(textarea):not([contenteditable]) {
+  cursor: default;
 }
 
 h1 {

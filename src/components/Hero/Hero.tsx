@@ -2,6 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import { motion } from 'framer-motion';
 import Button from '../Button';
+import OptimizedImage from '../OptimizedImage';
 
 interface HeroProps {
   title: string;
@@ -16,16 +17,16 @@ interface HeroProps {
   alignText?: 'left' | 'center' | 'right';
 }
 
-const HeroContainer = styled.section<{ backgroundImage: string; height: string; overlay: boolean }>`
+const HeroContainer = styled.section.withConfig({
+  shouldForwardProp: (prop) => !['height', 'overlay'].includes(prop),
+})<{ height: string; overlay: boolean }>`
   position: relative;
   height: ${({ height }) => height};
   width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
-  background-image: url(${({ backgroundImage }) => backgroundImage});
-  background-size: cover;
-  background-position: center;
+  background-color: #000000;
   color: ${({ theme }) => theme.colors.lightText};
   overflow: hidden;
   
@@ -37,13 +38,30 @@ const HeroContainer = styled.section<{ backgroundImage: string; height: string; 
     right: 0;
     bottom: 0;
     background: ${({ overlay }) => overlay ? 'linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.7))' : 'none'};
-    z-index: 1;
+    z-index: 2;
   }
 `;
 
-const HeroContent = styled.div<{ alignText: string }>`
+const BackgroundImage = styled(OptimizedImage)`
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+`;
+
+const HeroContent = styled.div.withConfig({
+  shouldForwardProp: (prop) => !['alignText'].includes(prop),
+})<{ alignText: string }>`
   position: relative;
-  z-index: 2;
+  z-index: 3;
   max-width: 1200px;
   width: 100%;
   padding: 0 1.5rem;
@@ -97,7 +115,12 @@ const Hero: React.FC<HeroProps> = ({
   alignText = 'left',
 }) => {
   return (
-    <HeroContainer backgroundImage={backgroundImage} height={height} overlay={overlay}>
+    <HeroContainer height={height} overlay={overlay}>
+      <BackgroundImage 
+        src={backgroundImage} 
+        alt="Hero background" 
+        priority={true}
+      />
       <HeroContent alignText={alignText}>
         <HeroTitle
           initial={{ opacity: 0, y: 20 }}

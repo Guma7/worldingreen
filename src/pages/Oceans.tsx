@@ -70,11 +70,10 @@ const OceansPage: React.FC = () => {
       <Hero 
         title="Oceanos em Perigo"
         subtitle="Entenda os desafios enfrentados pelos oceanos e seus impactos na vida marinha e no clima global"
-        backgroundImage="https://www.noticiasustentavel.com.br/wp-content/uploads/2025/04/plastico_oceanos.jpg"
-        ctaText="Saiba Mais"
+        backgroundImage="/images/oceans-hero.jpg"
         ctaLink="#info"
         overlay={true}
-        height="70vh"
+        height="80vh"
         alignText="center"
       />
       
@@ -83,7 +82,7 @@ const OceansPage: React.FC = () => {
           <InfoSection 
             title={oceansIssue.title}
             description={oceansIssue.description}
-            imageUrl={oceansIssue.imageUrl || 'https://images.unsplash.com/photo-1559827260-dc66d52bef19?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80'}
+            imageUrl={oceansIssue.imageUrl || '/images/ocean-fallback.jpg'}
             imageAlt="Poluição nos oceanos"
             backgroundColor={theme.colors.background}
           />
@@ -93,7 +92,7 @@ const OceansPage: React.FC = () => {
       <InfoSection 
         title="Acidificação dos Oceanos"
         description="A acidificação dos oceanos é causada pela absorção de dióxido de carbono (CO2) da atmosfera. Quando o CO2 se dissolve na água do mar, forma ácido carbônico, reduzindo o pH da água. Desde o início da Revolução Industrial, os oceanos absorveram cerca de 30% do CO2 emitido por atividades humanas, resultando em uma queda de 0,1 unidade no pH oceânico. Essa mudança representa um aumento de 30% na acidez. A acidificação prejudica diretamente os recifes de coral, causando o enfraquecimento de suas estruturas calcárias e dificultando sua formação e crescimento. Muitos organismos marinhos com conchas ou esqueletos de carbonato de cálcio, como moluscos, crustáceos e corais, têm dificuldade para formar suas estruturas em águas mais ácidas. Além disso, a acidificação afeta o desenvolvimento e a reprodução de diversas espécies marinhas, alterando o equilíbrio dos ecossistemas oceânicos e reduzindo a biodiversidade marinha."
-        imageUrl="https://www.iberdrola.com/documents/20125/1393375/Acidificacion_contenidoInterior_746x419.jpg/5380b8ef-4d0b-fb59-d851-4fd8c542b1e1?t=1640340854925"
+        imageUrl="/images/Acidificacion_contenidoInterior_746x419.jpg"
         imageAlt="Acidificação dos oceanos"
         reverse={true}
         backgroundColor={theme.colors.background}
@@ -165,7 +164,7 @@ const OceansPage: React.FC = () => {
       <InfoSection 
         title="Oceanos: Fonte Vital de Oxigênio"
         description="Os oceanos são responsáveis pela produção de 50-80% do oxigênio da Terra, superando a contribuição das florestas terrestres. Esta produção é realizada principalmente pelo fitoplâncton marinho - pequenas plantas à deriva, algas e algumas bactérias fotossintetizantes que habitam a zona iluminada da coluna d'água. Uma única espécie de bactéria marinha, a Prochlorococcus, é responsável por até 20% do oxigênio global - uma porcentagem maior do que todas as florestas tropicais combinadas. Isso torna a preservação dos oceanos tão ou mais importante que a conservação das florestas terrestres para a manutenção da vida no planeta. O aquecimento global, a poluição e a acidificação ameaçam estes organismos microscópicos essenciais, colocando em risco não apenas a biodiversidade marinha, mas também a própria qualidade do ar que respiramos."
-        imageUrl="https://images.unsplash.com/photo-1544551763-46a013bb70d5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80"
+        imageUrl="/images/ocean-pollution.jpg"
         imageAlt="Produção de oxigênio pelos oceanos"
         backgroundColor={theme.colors.background}
       />

@@ -14,17 +14,55 @@
     <meta property="og:url" content="https://www.worldingreen.com/" />
     <meta property="og:title" content="World in Green" />
     <meta property="og:description" content="Informações e dados sobre desmatamento, oceanos, agricultura e soluções para um mundo mais sustentável." />
-    <meta property="og:image" content="https://www.worldingreen.com/images/og-image.svg" />
+    <meta property="og:image" content="/images/og-image.svg" />
     
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image" />
     <meta property="twitter:url" content="https://www.worldingreen.com/" />
     <meta property="twitter:title" content="World in Green" />
     <meta property="twitter:description" content="Informações e dados sobre desmatamento, oceanos, agricultura e soluções para um mundo mais sustentável." />
-    <meta property="twitter:image" content="https://www.worldingreen.com/images/og-image.svg" />
+    <meta property="twitter:image" content="/images/og-image.svg" />
+    
+    <!-- Preload das imagens de capa principais com prioridade alta -->
+    <link rel="preload" as="image" href="/images/forest-background.jpg" fetchpriority="high" />
+    <link rel="preload" as="image" href="/images/deforestation-hero.jpg" fetchpriority="high" />
+    <link rel="preload" as="image" href="/images/oceans-hero.jpg" fetchpriority="high" />
+    <link rel="preload" as="image" href="/images/agriculture-hero.jpg" fetchpriority="high" />
+    <link rel="preload" as="image" href="/images/solutions-hero.jpg" fetchpriority="high" />
+    <link rel="preload" as="image" href="/images/references-background.jpg" fetchpriority="high" />
   </head>
   <body>
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
+    
+    <!-- Service Worker para cache de imagens -->
+    <script>
+      if ('serviceWorker' in navigator) {
+        window.addEventListener('load', () => {
+          navigator.serviceWorker.register('/sw.js')
+            .then((registration) => {
+              console.log('SW registrado com sucesso:', registration.scope);
+              
+              // Pré-carregar imagens críticas
+              const criticalImages = [
+                '/images/forest-background.jpg',
+                '/images/deforestation-hero.jpg',
+                '/images/oceans-hero.jpg',
+                '/images/agriculture-hero.jpg',
+                '/images/solutions-hero.jpg',
+                '/images/references-background.jpg'
+              ];
+              
+              registration.active?.postMessage({
+                type: 'PRELOAD_IMAGES',
+                images: criticalImages
+              });
+            })
+            .catch((registrationError) => {
+              console.log('SW falhou ao registrar:', registrationError);
+            });
+        });
+      }
+    </script>
   </body>
 </html>

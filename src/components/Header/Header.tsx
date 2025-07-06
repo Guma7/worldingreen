@@ -2,12 +2,15 @@ import React, { useState, useEffect } from 'react';
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 import { FaBars, FaTimes, FaLeaf } from 'react-icons/fa';
+import useImagePreloader from '../../hooks/useImagePreloader';
 
 interface HeaderProps {
   transparent?: boolean;
 }
 
-const HeaderContainer = styled.header<{ scrolled: boolean; transparent?: boolean }>`
+const HeaderContainer = styled.header.withConfig({
+  shouldForwardProp: (prop) => !['scrolled', 'transparent'].includes(prop),
+})<{ scrolled: boolean; transparent?: boolean }>`
   position: fixed;
   top: 0;
   left: 0;
@@ -47,7 +50,9 @@ const Logo = styled(Link)`
   }
 `;
 
-const NavLinks = styled.nav<{ isOpen: boolean }>`
+const NavLinks = styled.nav.withConfig({
+  shouldForwardProp: (prop) => !['isOpen'].includes(prop),
+})<{ isOpen: boolean }>`
   display: flex;
   align-items: center;
   
@@ -120,7 +125,9 @@ const CloseButton = styled(MobileMenuButton)`
   right: 1.5rem;
 `;
 
-const Overlay = styled.div<{ isOpen: boolean }>`
+const Overlay = styled.div.withConfig({
+  shouldForwardProp: (prop) => !['isOpen'].includes(prop),
+})<{ isOpen: boolean }>`
   position: fixed;
   top: 0;
   left: 0;
@@ -140,6 +147,11 @@ const Overlay = styled.div<{ isOpen: boolean }>`
 const Header: React.FC<HeaderProps> = ({ transparent = false }) => {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const { preloadRouteImages } = useImagePreloader();
+  
+  const handleLinkHover = (route: string) => {
+    preloadRouteImages(route);
+  };
 
   useEffect(() => {
     const handleScroll = () => {
@@ -188,12 +200,54 @@ const Header: React.FC<HeaderProps> = ({ transparent = false }) => {
             <FaTimes />
           </CloseButton>
           
-          <NavLink to="/" onClick={handleNavClick}>Início</NavLink>
-          <NavLink to="/deforestation" onClick={handleNavClick}>Desmatamento</NavLink>
-          <NavLink to="/oceans" onClick={handleNavClick}>Oceanos</NavLink>
-          <NavLink to="/agriculture" onClick={handleNavClick}>Agricultura</NavLink>
-          <NavLink to="/solutions" onClick={handleNavClick}>Soluções</NavLink>
-          <NavLink to="/references" onClick={handleNavClick}>Referências</NavLink>
+          <NavLink 
+            to="/" 
+            onClick={handleNavClick}
+            onMouseEnter={() => handleLinkHover('/')}
+            data-preload-route
+          >
+            Início
+          </NavLink>
+          <NavLink 
+            to="/deforestation" 
+            onClick={handleNavClick}
+            onMouseEnter={() => handleLinkHover('/deforestation')}
+            data-preload-route
+          >
+            Desmatamento
+          </NavLink>
+          <NavLink 
+            to="/oceans" 
+            onClick={handleNavClick}
+            onMouseEnter={() => handleLinkHover('/oceans')}
+            data-preload-route
+          >
+            Oceanos
+          </NavLink>
+          <NavLink 
+            to="/agriculture" 
+            onClick={handleNavClick}
+            onMouseEnter={() => handleLinkHover('/agriculture')}
+            data-preload-route
+          >
+            Agricultura
+          </NavLink>
+          <NavLink 
+            to="/solutions" 
+            onClick={handleNavClick}
+            onMouseEnter={() => handleLinkHover('/solutions')}
+            data-preload-route
+          >
+            Soluções
+          </NavLink>
+          <NavLink 
+            to="/references" 
+            onClick={handleNavClick}
+            onMouseEnter={() => handleLinkHover('/references')}
+            data-preload-route
+          >
+            Referências
+          </NavLink>
           
         </NavLinks>
       </HeaderContent>

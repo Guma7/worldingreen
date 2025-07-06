@@ -15,12 +15,16 @@ interface InfoSectionProps {
   backgroundColor?: string;
 }
 
-const SectionContainer = styled.section<{ backgroundColor?: string }>`
+const SectionContainer = styled.section.withConfig({
+  shouldForwardProp: (prop) => !['backgroundColor'].includes(prop),
+})<{ backgroundColor?: string }>`
   padding: 4rem 0;
   background-color: ${({ backgroundColor, theme }) => backgroundColor || theme.colors.background};
 `;
 
-const SectionContent = styled.div<{ reverse: boolean }>`
+const SectionContent = styled.div.withConfig({
+  shouldForwardProp: (prop) => !['reverse'].includes(prop),
+})<{ reverse: boolean }>`
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 1.5rem;

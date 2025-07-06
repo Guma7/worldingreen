@@ -12,7 +12,9 @@ interface SolutionsSectionProps {
   backgroundColor?: string;
 }
 
-const SectionContainer = styled.section<{ backgroundColor?: string }>`
+const SectionContainer = styled.section.withConfig({
+  shouldForwardProp: (prop) => !['backgroundColor'].includes(prop),
+})<{ backgroundColor?: string }>`
   padding: 4rem 0;
   background-color: ${({ backgroundColor, theme }) => backgroundColor || theme.colors.background};
 `;

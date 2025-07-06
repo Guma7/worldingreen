@@ -38,7 +38,7 @@ export const environmentalIssues: EnvironmentalIssue[] = [
     id: 1,
     title: 'Desmatamento para Pecuária',
     description: 'A pecuária é a principal causa do desmatamento na Amazônia brasileira. A expansão das áreas de pastagem para criação de gado é responsável por cerca de 80% do desmatamento na região. O Brasil possui o maior rebanho comercial do mundo, com mais de 200 milhões de cabeças de gado, e é o maior exportador mundial de carne bovina.',
-    imageUrl: 'https://s2.glbimg.com/IxOMtTZvIWG8YAE2PGlWpwnGMa8=/780x440/e.glbimg.com/og/ed/f/original/2020/10/09/gettyimages-1175262680_1.jpg',
+    imageUrl: '/images/ocean-warming.jpg',
     statistics: [
       {
         id: 1,
@@ -83,7 +83,7 @@ export const environmentalIssues: EnvironmentalIssue[] = [
     id: 2,
     title: 'Produção de Soja',
     description: 'O Brasil é o maior produtor de soja do mundo ( e terceiro maior produtor de milho, atrás apenas dos Estados Unidos e da China ). Grande parte da produção de soja no país é destinada à alimentação animal, principalmente para a criação de aves e suínos. Globalmente, cerca de 83% das terras agrícolas são usadas para a criação de animais e cultivo de ração, enquanto fornecem apenas 18% das calorias consumidas pelos humanos.',
-    imageUrl: 'https://images.unsplash.com/photo-1625246333195-78d9c38ad449?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80',
+    imageUrl: '/images/soy-production.jpg',
     statistics: [
       {
         id: 1,
@@ -127,7 +127,7 @@ export const environmentalIssues: EnvironmentalIssue[] = [
     id: 3,
     title: 'Consumo de Água na Indústria Pecuária',
     description: 'A atividade agropecuária responde por 92% da pegada hídrica global, com a produção de carne bovina sendo especialmente intensiva em água. São necessários aproximadamente 15.000 litros de água para produzir 1kg de carne bovina, enquanto alimentos de origem vegetal geralmente requerem muito menos água. A irrigação para produção de alimentos para animais também consome 72% da água doce do planeta.',
-    imageUrl: 'https://diplomatique.org.br/wp-content/uploads/2024/04/agua-pecuaria.jpeg',
+    imageUrl: '/images/livestock-water.jpeg',
     statistics: [
       {
         id: 1,
@@ -172,7 +172,7 @@ export const environmentalIssues: EnvironmentalIssue[] = [
     id: 4,
     title: 'Aquecimento dos Oceanos',
     description: 'Os oceanos absorvem cerca de 90% do calor adicional gerado pelo aquecimento global e aproximadamente um terço das emissões de CO2. Isso resulta no aumento da temperatura dos oceanos, acidificação e redução dos níveis de oxigênio, ameaçando ecossistemas marinhos como os recifes de coral. O aquecimento dos oceanos também contribui para eventos climáticos extremos, como furacões mais intensos e frequentes.',
-    imageUrl: 'https://123ecos.com.br/wp-content/uploads/2023/09/Derretimento-dos-glaciares.png',
+    imageUrl: '/images/glacier-melting.png',
     statistics: [
       {
         id: 1,
@@ -223,7 +223,7 @@ export const environmentalSolutions: Solution[] = [
     id: 1,
     title: 'Eliminação do Consumo de Carnes',
     description: 'Abandonar completamente o consumo de carnes é essencial para reduzir drasticamente a pressão sobre florestas, o uso de água e as emissões de gases de efeito estufa. Adotar uma dieta 100% baseada em vegetais representa uma das mudanças mais impactantes que um indivíduo pode fazer para diminuir sua pegada ambiental. Precisamos de mudanças drásticas e imediatas para salvar nosso planeta.',
-    imageUrl: 'https://images.unsplash.com/photo-1512621776951-a57141f2eefd?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80',
+    imageUrl: '/images/plant-based-diet.jpg',
     category: 'individual',
     impact: 'high',
   },
@@ -231,7 +231,7 @@ export const environmentalSolutions: Solution[] = [
     id: 2,
     title: 'Políticas de Desmatamento Zero',
     description: 'Implementação e fiscalização rigorosa de políticas que proíbam o desmatamento para expansão agropecuária, mineração e outros fins. Isso inclui o fortalecimento de órgãos de fiscalização ambiental e o uso de tecnologias de monitoramento por satélite.',
-    imageUrl: 'https://www.greenpeace.org/static/planet4-brasil-stateless/2024/05/5b07ea98-floresta-amazonica.jpg',
+    imageUrl: '/images/amazon-forest.jpg',
     category: 'policy',
     impact: 'high',
   },
@@ -239,7 +239,7 @@ export const environmentalSolutions: Solution[] = [
     id: 3,
     title: 'Agricultura Regenerativa',
     description: 'Práticas agrícolas que restauram a saúde do solo, aumentam a biodiversidade e sequestram carbono, como rotação de culturas, plantio direto, compostagem e integração lavoura-pecuária-floresta. Essas técnicas podem aumentar a produtividade sem expandir a área cultivada.',
-    imageUrl: 'https://www.vidarural.pt/wp-content/uploads/sites/5/2017/05/crian%C3%A7as-agricultura-Vida-Rural-.jpg',
+    imageUrl: '/images/children-agriculture.jpg',
     category: 'technology',
     impact: 'high',
   },
@@ -247,7 +247,7 @@ export const environmentalSolutions: Solution[] = [
     id: 4,
     title: 'Proteção de Áreas Marinhas',
     description: 'Criação e manutenção de áreas marinhas protegidas, que ajudam a preservar ecossistemas oceânicos, restaurar populações de peixes e aumentar a resiliência dos oceanos às mudanças climáticas. Implementação de projetos governamentais de "esgoto zero e plástico zero" ao oceano, fundamentais para a preservação da vida marinha e qualidade das águas.',
-    imageUrl: 'https://images.unsplash.com/photo-1583212292454-1fe6229603b7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80',
+    imageUrl: '/images/sustainable-agriculture.jpg',
     category: 'conservation',
     impact: 'medium',
   },
@@ -255,7 +255,7 @@ export const environmentalSolutions: Solution[] = [
     id: 5,
     title: 'Tecnologias de Economia de Água',
     description: 'Implementação de sistemas de irrigação eficientes, como gotejamento, e tecnologias de reuso de água na agricultura e indústria para reduzir o consumo de água doce.',
-    imageUrl: 'https://colatinaemacao.com.br/wp-content/uploads/2025/02/economia_agua.jpg',
+    imageUrl: '/images/water-economy.jpg',
     category: 'technology',
     impact: 'medium',
   },
@@ -263,7 +263,7 @@ export const environmentalSolutions: Solution[] = [
     id: 6,
     title: 'Consumo Consciente',
     description: 'Escolha exclusiva de produtos com certificação ambiental, provenientes de empresas comprometidas com boas práticas ambientais, respeito aos seres vivos e condições dignas de trabalho. Priorização de marcas que não estejam envolvidas com trabalho escravo, exploração humana ou degradação ambiental, garantindo um impacto positivo em toda a cadeia produtiva.',
-    imageUrl: 'https://carenb.com/cdn/shop/articles/Destaque_Cruelty_Free_6c1526b6-05f5-4d93-944b-0e63dc7be882.jpg?v=1739209633&width=1500',
+    imageUrl: '/images/cruelty-free.jpg',
     category: 'individual',
     impact: 'medium',
   },

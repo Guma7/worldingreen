@@ -39,7 +39,9 @@ const ComparisonContainer = styled.div`
   gap: 1rem;
 `;
 
-const ComparisonItem = styled.div<{ primary?: boolean }>`
+const ComparisonItem = styled.div.withConfig({
+  shouldForwardProp: (prop) => !['primary'].includes(prop),
+})<{ primary?: boolean }>`
   flex: 1;
   display: flex;
   flex-direction: column;
@@ -51,7 +53,9 @@ const ComparisonItem = styled.div<{ primary?: boolean }>`
   border-radius: ${({ theme }) => theme.borderRadius.small};
 `;
 
-const ComparisonValue = styled.span<{ primary?: boolean }>`
+const ComparisonValue = styled.span.withConfig({
+  shouldForwardProp: (prop) => !['primary'].includes(prop),
+})<{ primary?: boolean }>`
   font-size: 2rem;
   font-weight: 700;
   margin-bottom: 0.5rem;
